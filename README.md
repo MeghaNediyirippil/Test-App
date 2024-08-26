@@ -46,15 +46,24 @@ The project includes the following components:
 
     => FormsComponent: Handles form inputs and validation.
 
+    => BarChart: Create Bar chart and view Doughnut Chart.
+
+    => BarChartColorComponent: Shows colored bar charts for comparative analysis.
+
+    => DoughnutChartComponent: Creates doughnut charts for percentage-based data.
+
     => DashboardComponent: The main dashboard view with graphs.
 
     => LineChartComponent: Display line charts for data visualization.
 
     => MonthlyLineChartComponent: Displays line charts with monthly data.
 
-    => BarChartComponent: Shows bar charts for comparative analysis.
-    
-    => DoughnutChartComponent: Creates doughnut charts for percentage-based data.
+    => PieChartComponent: Display two pie chart with two different data.
+
+    =>ProgressiveDoughnutChartsComponent: Display 4 prograssive Doughnut Charts.
+
+    =>ProgressiveLineChartComponent: Display prograssive scattered line chart.
+
 
 ## Acknowledgements
     Bootstrap: https://getbootstrap.com
