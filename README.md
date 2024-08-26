@@ -37,14 +37,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Components
 The project includes the following components:
+
     => HeaderComponent: Displays the application header.
+
     => SidebarComponent: Provides navigation links and a sidebar menu.
+
     => TablesComponent: Display different types tables.
+
     => FormsComponent: Handles form inputs and validation.
+
     => DashboardComponent: The main dashboard view with graphs.
+
     => LineChartComponent: Display line charts for data visualization.
+
     => MonthlyLineChartComponent: Displays line charts with monthly data.
+
     => BarChartComponent: Shows bar charts for comparative analysis.
+    
     => DoughnutChartComponent: Creates doughnut charts for percentage-based data.
 
 ## Acknowledgements
