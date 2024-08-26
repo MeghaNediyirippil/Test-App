@@ -1,0 +1,35 @@
+<!-- Header Component -->
+<div class="header bg-dark py-2">
+    <div class="container">
+      <div class="row align-items-center mx-5">
+        <div class="col-md-10">
+          <div class="logo">
+            <h1 class="m-0">
+              <a routerLink="" class="text-white text-decoration-none">Alpha Theme</a>
+            </h1>
+          </div>
+        </div>
+        <!-- Navbar Section -->
+        <!-- Navbar Section -->
+      <div class="col-md-2">
+        <nav class="navbar navbar-expand-lg p-0">
+          <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  My Account
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" (click)="logout()">Logout</a></li>                  
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

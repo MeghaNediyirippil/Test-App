@@ -1,0 +1,21 @@
+.header {
+  background-color: #2477b8;
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  color: white;
+  background-color: transparent;
+}
+
+.dropdown-toggle::after {
+  margin-left: 0.5rem;
+}
