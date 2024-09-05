@@ -22,9 +22,9 @@ export class DoughnutChartComponent {
         label: 'My First Dataset',
         data: [300, 50, 100],
         backgroundColor: [
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)'
+          'rgb(118, 189, 238)',
+          'rgb(48, 161, 236)',
+          'rgb(196, 218, 254)'
         ],
         hoverOffset: 4
       }]

@@ -10,3 +10,10 @@
 .btn-color{
     background-color: #4191d2;
 }
+.btn-color:hover{
+    background-color: #3170a3;
+}
+
+.icon-color{
+    color: #82aed4;
+}

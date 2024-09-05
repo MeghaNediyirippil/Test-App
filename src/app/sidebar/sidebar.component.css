@@ -1,18 +1,13 @@
-.sidebar ul.nav,
-.sidebar ul.nav ul {
+.sidebar ul.nav{
    list-style: none;
    padding: 0px;
    margin: 0px;
-}
-
-.sidebar ul.nav ul {
-   margin: 0px;
-   padding: 0px;
-   display: none;
+   display: flex;
+   flex-direction: column;
 }
 
 .sidebar-nav {
-   width: 200px;
+   width: 220px;
 }
 
 .sidebar .nav>li {

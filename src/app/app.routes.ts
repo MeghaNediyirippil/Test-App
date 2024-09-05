@@ -3,6 +3,8 @@ import { TablesComponent } from './tables/tables.component';
 import { FormsComponent } from './forms/forms.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalenderComponent } from './calender/calender.component';
+import { FullCalendarComponent } from '@fullcalendar/angular';
+import { Calendar } from '@fullcalendar/core/index.js';
 
 export const routes: Routes = [
     { path: '', component: DashboardComponent },

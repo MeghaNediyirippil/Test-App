@@ -36,10 +36,10 @@ export class ProgressiveDoughnutChartComponent implements OnInit {
   }
 
   createCharts(): void {
-    this.chart1 = this.createDoughnutChart(this.doughnutChart1.nativeElement, this.dataValues1, ['rgb(255, 99, 132)', 'rgb(54, 162, 235)']);
-    this.chart2 = this.createDoughnutChart(this.doughnutChart2.nativeElement, this.dataValues2, ['rgb(75, 192, 192)', 'rgb(153, 102, 255)']);
-    this.chart3 = this.createDoughnutChart(this.doughnutChart3.nativeElement, this.dataValues3, ['rgb(255, 159, 64)', 'rgb(255, 205, 86)']);
-    this.chart4 = this.createDoughnutChart(this.doughnutChart4.nativeElement, this.dataValues4, ['rgb(255, 99, 132)', 'rgb(235, 89, 152)']);
+    this.chart1 = this.createDoughnutChart(this.doughnutChart1.nativeElement, this.dataValues1, ['rgb(48, 161, 236)', 'rgb(212, 236, 253)']);
+    this.chart2 = this.createDoughnutChart(this.doughnutChart2.nativeElement, this.dataValues2, ['rgb(138, 195, 104)', 'rgb(196, 233, 170)']);
+    this.chart3 = this.createDoughnutChart(this.doughnutChart3.nativeElement, this.dataValues3, ['rgb(91, 160, 163)', 'rgb(206, 243, 245)']);
+    this.chart4 = this.createDoughnutChart(this.doughnutChart4.nativeElement, this.dataValues4, ['rgb(184, 94, 128)', 'rgb(248, 210, 224)']);
   }
 
   createDoughnutChart(canvas: HTMLCanvasElement, dataValues: number[], colors: string[]): Chart<'doughnut'> {

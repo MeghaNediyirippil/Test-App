@@ -9,6 +9,7 @@ import { LineChartComponent } from "./line-chart/line-chart.component";
 import { MonthlyLineChartComponent } from "./monthly-line-chart/monthly-line-chart.component";
 import { BarChartComponent } from "./bar-chart/bar-chart.component";
 import { DoughnutChartComponent } from "./doughnut-chart/doughnut-chart.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -16,8 +17,9 @@ import { DoughnutChartComponent } from "./doughnut-chart/doughnut-chart.componen
   imports: [
     RouterOutlet, HeaderComponent, SidebarComponent, TablesComponent,
     FormsComponent, DashboardComponent, LineChartComponent, MonthlyLineChartComponent,
-    BarChartComponent, DoughnutChartComponent, RouterLink
-  ],
+    BarChartComponent, DoughnutChartComponent, RouterLink,
+    FooterComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

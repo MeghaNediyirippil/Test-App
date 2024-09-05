@@ -19,10 +19,10 @@ export class PieChartComponent implements OnInit {
       numbers: (cfg: { count: number; min: number; max: number }): number[] =>
         Array.from({ length: cfg.count }, () => Math.floor(Math.random() * (cfg.max - cfg.min + 1)) + cfg.min),
       CHART_COLORS: {
-        Red: 'rgb(255, 99, 132)',
-        Orange: 'rgb(255, 159, 64)',
-        Yellow: 'rgb(255, 205, 86)',
-        Green: 'rgb(75, 192, 192)',
+        blue1: 'rgb(204, 224, 240)',
+        blue2: 'rgb(109, 180, 237)',
+        blue3: 'rgb(5, 94, 166)',
+        blue4: 'rgb(3, 38, 66)',
         Blue: 'rgb(54, 162, 235)',
         Purple: 'rgb(153, 102, 255)',
         Brown: 'rgb(139, 69, 19)',
@@ -32,22 +32,20 @@ export class PieChartComponent implements OnInit {
     };
 
     const data1 = {
-      labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue','Purple','Grey','Teal'],
       datasets: [
         {
           label: 'Dataset 1',
-          data: Utils.numbers({ count: 8, min: 10, max: 100 }),
+          data: Utils.numbers({ count: 4, min: 10, max: 100 }),
           backgroundColor: Object.values(Utils.CHART_COLORS),        }
       ]
     };
 
     const data2 = {
-      labels: ['Green', 'Blue','Red', 'Orange','Teal'],
       datasets: [
         {
           label: 'Dataset 2',
-          data: Utils.numbers({ count: 5, min: 20, max: 60 }),
-          backgroundColor: [Utils.CHART_COLORS.Red,Utils.CHART_COLORS.Orange,Utils.CHART_COLORS.Green, Utils.CHART_COLORS.Blue, Utils.CHART_COLORS.Teal],
+          data: Utils.numbers({ count: 6, min: 20, max: 60 }),
+          backgroundColor: Object.values(Utils.CHART_COLORS)
         }
       ]
     };

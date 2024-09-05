@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';  // Import FormsModule to use ngModel
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-tables',
   standalone: true,
-  imports: [CommonModule, FormsModule],  // Import CommonModule and FormsModule for form controls
+  imports: [CommonModule, FormsModule], 
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.css']
 })
@@ -97,5 +97,9 @@ export class TablesComponent {
   // Method to reset page number on search
   onSearch() {
     this.currentPage = 1;
+  }
+
+  get totalItemCount(): number {
+    return this.filteredData.length;
   }
 }

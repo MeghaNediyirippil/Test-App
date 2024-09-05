@@ -15,7 +15,7 @@ interface CurrencyData {
 })
 export class CurrencyService {
 
-  private apiUrlcurrency = 'assets/currency.json'; // Path to your JSON file
+  private apiUrlcurrency = 'assets/currency.json';
 
   constructor(private http: HttpClient) {}
 

@@ -20,7 +20,7 @@ export interface Country {
   providedIn: 'root'
 })
 export class CountryService {
-  private apiUrl = 'https://restcountries.com/v3.1/all'; // Example API URL
+  private apiUrl = 'https://restcountries.com/v3.1/all';
 
   constructor(private http: HttpClient) {}
 
@@ -28,7 +28,7 @@ export class CountryService {
     return this.http.get<Country[]>(this.apiUrl).pipe(
       catchError((error: HttpErrorResponse) => {
         console.error('Error fetching countries:', error);
-        return of([]); // Return an empty array or handle error appropriately
+        return of([]);
       })
     );
   }
