@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Country, CountryService } from '../services/country.service';
-import { LanguageService } from '../services/language.service';
+import { Country, CountryService } from '../../app/services/country/country.service';
+import { LanguageService } from '../services/language/language.service';
 import { KeysPipe } from '../pipes/keys.pipe';
 import { CurrencyService } from '../services/currency/currency.service';
-import { TimezoneService } from '../services/timezone/timezone.service';
+import { TimezoneService } from '../../app/services/timezone/timezone.service';
 import * as bootstrap from 'bootstrap';
 
 interface Currency {
