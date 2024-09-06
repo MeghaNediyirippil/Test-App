@@ -1,0 +1,31 @@
+/* Add styles that replicate your original login-bg or any custom styles */
+.login-bg {
+    background-color: #f8f9fa;
+    height: 100vh;
+  }
+  
+  .header {
+    padding: 20px 0;
+  }
+  
+  .logo h1 {
+    font-size: 36px;
+  }
+  
+  .page-content {
+    height: 74vh;
+    margin-top: 50px;
+  }
+  
+  .login-wrapper {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .already {
+    margin-top: 20px;
+    text-align: center;
+  }
+  

@@ -11,8 +11,8 @@ Chart.register(...registerables);
 })
 export class PieChartComponent implements OnInit {
 
-  chart1: Chart| undefined;
-  chart2: Chart| undefined;
+  chart1: Chart | undefined;
+  chart2: Chart | undefined;
 
   ngOnInit(): void {
     const Utils = {
@@ -36,7 +36,8 @@ export class PieChartComponent implements OnInit {
         {
           label: 'Dataset 1',
           data: Utils.numbers({ count: 4, min: 10, max: 100 }),
-          backgroundColor: Object.values(Utils.CHART_COLORS),        }
+          backgroundColor: Object.values(Utils.CHART_COLORS),
+        }
       ]
     };
 
@@ -68,7 +69,7 @@ export class PieChartComponent implements OnInit {
     };
 
     // Configuration for the second pie chart
-    const config2: any= {
+    const config2: any = {
       type: 'pie',
       data: data2,
       options: {

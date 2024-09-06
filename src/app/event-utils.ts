@@ -1,7 +1,7 @@
 import { EventInput } from '@fullcalendar/core';
 
 let eventGuid = 0;
-const TODAY_STR = new Date().toISOString().replace(/T.*$/, ''); 
+const TODAY_STR = new Date().toISOString().replace(/T.*$/, '');
 
 export const INITIAL_EVENTS: EventInput[] = [
   {

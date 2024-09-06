@@ -28,14 +28,14 @@ export class FormsComponent implements AfterViewInit {
   @ViewChild('popoverTrigger3', { static: false }) popoverTrigger3!: ElementRef;
   @ViewChild('popoverTrigger4', { static: false }) popoverTrigger4!: ElementRef;
   @ViewChild('dob', { static: false }) dobElement!: ElementRef;
-  @ViewChild('commentsPopover', { static: false }) commentsElement!: ElementRef;  
+  @ViewChild('commentsPopover', { static: false }) commentsElement!: ElementRef;
 
   popoverText = 'superuser';
   popoverEmpty = 'Empty';
   selectedSex = 'not selected';
   dateSelected: string = '1984-05-15';
 
-  awesome='awesome user!'
+  awesome = 'awesome user!'
 
   // color picker
   selectedColor: string = '#00000';
@@ -45,7 +45,7 @@ export class FormsComponent implements AfterViewInit {
 
   // scroller
   percentage: number = 90;
-  thumbPosition: number = 90; // Initialize position
+  thumbPosition: number = 90;
 
   // countries
   selectedCountry: string = '';
@@ -94,7 +94,7 @@ export class FormsComponent implements AfterViewInit {
     private languageService: LanguageService,
     private currencyService: CurrencyService,
     private elementRef: ElementRef,
-    ) { }
+  ) { }
 
 
   ngOnInit(): void {
@@ -146,20 +146,19 @@ export class FormsComponent implements AfterViewInit {
     this.initializeDropdownPopover(this.popoverTrigger4.nativeElement);
     this.initializeDatePopover(this.dobElement.nativeElement, this.dateSelected);
     this.initializeCommentsPopover(this.commentsElement.nativeElement);
-      }
+  }
 
   initializePopover(element: HTMLElement, content: string) {
     const popoverInstance = new bootstrap.Popover(element, {
       html: true,
-      content: this.getPopoverContent(content),  // Pass content dynamically
+      content: this.getPopoverContent(content),
       sanitize: false,
     });
-
-    // Listen for the 'shown.bs.popover' event to attach button event listeners
     element.addEventListener('shown.bs.popover', () => {
       this.addEventListenersToPopoverButtons(element);
     });
   }
+
   // dropdown
   initializeDropdownPopover(element: HTMLElement) {
     new bootstrap.Popover(element, {
@@ -215,7 +214,6 @@ export class FormsComponent implements AfterViewInit {
       popoverSaveButton.addEventListener('click', () => {
         const newText = popoverTextInput.value;
 
-        // Update the respective content variable based on the popover element
         if (popoverElement === this.popoverTrigger1.nativeElement) {
           this.popoverText = newText;
         } else if (popoverElement === this.popoverTrigger2.nativeElement) {
@@ -231,6 +229,7 @@ export class FormsComponent implements AfterViewInit {
       });
     }
   }
+
   // drop down
   addDropdownEventListeners(popoverElement: HTMLElement) {
     const popoverSaveButton = document.getElementById('popoverSaveDropdown');
@@ -249,6 +248,7 @@ export class FormsComponent implements AfterViewInit {
       });
     }
   }
+
   updatePopoverContent(element: HTMLElement, newContent: string) {
     const popoverInstance = bootstrap.Popover.getInstance(element);
     if (popoverInstance) {
@@ -260,13 +260,13 @@ export class FormsComponent implements AfterViewInit {
       });
     }
   }
+
   closePopover(popoverElement: HTMLElement) {
     const popoverInstance = bootstrap.Popover.getInstance(popoverElement);
     if (popoverInstance) {
       popoverInstance.hide();
     }
   }
-
 
   // date popover
   initializeDatePopover(element: HTMLElement, date: string) {
@@ -276,13 +276,9 @@ export class FormsComponent implements AfterViewInit {
       sanitize: false,
       placement: 'bottom'
     });
-
-    // Update the popover when shown
     element.addEventListener('shown.bs.popover', () => {
       this.initializeDatePicker();
     });
-
-
   }
 
   getDatePopoverContent(date: string) {
@@ -299,7 +295,7 @@ export class FormsComponent implements AfterViewInit {
 
   initializeDatePicker() {
     const datePickerElement = document.getElementById('datePickerInput') as HTMLInputElement;
-      if (datePickerElement) {
+    if (datePickerElement) {
       const saveButton = document.getElementById('popoverSaveDate');
       const closeButton = document.getElementById('popoverCloseDate');
 
@@ -320,9 +316,9 @@ export class FormsComponent implements AfterViewInit {
   updateDatePopoverContent(element: HTMLElement, newDate: string) {
     const popoverInstance = bootstrap.Popover.getInstance(element);
     if (popoverInstance) {
-      popoverInstance.dispose(); // Dispose the current instance
+      popoverInstance.dispose();
     }
-    
+
     new bootstrap.Popover(element, {
       html: true,
       content: this.getDatePopoverContent(newDate),
@@ -333,24 +329,22 @@ export class FormsComponent implements AfterViewInit {
 
 
 
-// popover comment
-// Initialize Comments Popover
-initializeCommentsPopover(element: HTMLElement) {
-  const popover = new bootstrap.Popover(element, {
-    html: true,
-    content: this.getCommentsPopoverContent(),
-    sanitize: false,
-    placement: 'bottom'
-  });
+  // popover comment
+  initializeCommentsPopover(element: HTMLElement) {
+    const popover = new bootstrap.Popover(element, {
+      html: true,
+      content: this.getCommentsPopoverContent(),
+      sanitize: false,
+      placement: 'bottom'
+    });
 
-  element.addEventListener('shown.bs.popover', () => {
-    this.initializePopoverEvents();
-  });
-}
+    element.addEventListener('shown.bs.popover', () => {
+      this.initializePopoverEvents();
+    });
+  }
 
-// Get Comments Popover Content
-getCommentsPopoverContent() {
-  return `
+  getCommentsPopoverContent() {
+    return `
     <div class="popover-content p-0 m-0">
       <textarea id="commentsTextarea" class="form-control" rows="3">${this.awesome}</textarea>
       <div class="popover-buttons d-flex mt-2">
@@ -359,71 +353,61 @@ getCommentsPopoverContent() {
       </div>
     </div>
   `;
-}
+  }
 
-// Initialize Popover Events
-initializePopoverEvents() {
-  const saveButton = document.getElementById('popoverSaveComments');
-  const closeButton = document.getElementById('popoverCloseComments');
-  const commentsTextarea = document.getElementById('commentsTextarea') as HTMLTextAreaElement;
+  initializePopoverEvents() {
+    const saveButton = document.getElementById('popoverSaveComments');
+    const closeButton = document.getElementById('popoverCloseComments');
+    const commentsTextarea = document.getElementById('commentsTextarea') as HTMLTextAreaElement;
 
-  if (saveButton && closeButton && commentsTextarea) {
-    saveButton.addEventListener('click', () => {
-      this.saveComment(commentsTextarea.value);
-      this.closePopoverr();
-    });
-
-    closeButton.addEventListener('click', () => {
-      this.closePopoverr();
-    });
-
-    // Optionally, handle "ctrl+enter" to save
-    commentsTextarea.addEventListener('keydown', (event) => {
-      if (event.ctrlKey && event.key === 'Enter') {
-        event.preventDefault();
+    if (saveButton && closeButton && commentsTextarea) {
+      saveButton.addEventListener('click', () => {
         this.saveComment(commentsTextarea.value);
         this.closePopoverr();
-      }
-    });
+      });
+
+      closeButton.addEventListener('click', () => {
+        this.closePopoverr();
+      });
+
+      commentsTextarea.addEventListener('keydown', (event) => {
+        if (event.ctrlKey && event.key === 'Enter') {
+          event.preventDefault();
+          this.saveComment(commentsTextarea.value);
+          this.closePopoverr();
+        }
+      });
+    }
   }
-}
 
-// Save Comment and Update the Popover
-saveComment(newComment: string) {
-  this.awesome = newComment; // Update the comment text
-  this.updateCommentsPopoverContent(this.commentsElement.nativeElement, this.awesome);
-  console.log('New comment:', newComment); // Replace with actual save logic
-}
-
-// Update Comments Popover Content
-updateCommentsPopoverContent(element: HTMLElement, newComment: string) {
-  const popoverInstance = bootstrap.Popover.getInstance(element);
-  if (popoverInstance) {
-    popoverInstance.dispose(); // Dispose the current instance
-    new bootstrap.Popover(element, {
-      html: true,
-      content: this.getCommentsPopoverContent(),
-      sanitize: false,
-      placement: 'bottom'
-    });
+  // Save Comment and Update the Popover
+  saveComment(newComment: string) {
+    this.awesome = newComment;
+    this.updateCommentsPopoverContent(this.commentsElement.nativeElement, this.awesome);
+    console.log('New comment:', newComment);
   }
-}
 
-// Close Popover
-closePopoverr() {
-  const popoverInstance = bootstrap.Popover.getInstance(this.commentsElement.nativeElement);
-  if (popoverInstance) {
-    popoverInstance.hide();
+  // Update Comments Popover Content
+  updateCommentsPopoverContent(element: HTMLElement, newComment: string) {
+    const popoverInstance = bootstrap.Popover.getInstance(element);
+    if (popoverInstance) {
+      popoverInstance.dispose();
+      new bootstrap.Popover(element, {
+        html: true,
+        content: this.getCommentsPopoverContent(),
+        sanitize: false,
+        placement: 'bottom'
+      });
+    }
   }
-}
 
-
-
-
-
-
-
-
+  // Close Popover
+  closePopoverr() {
+    const popoverInstance = bootstrap.Popover.getInstance(this.commentsElement.nativeElement);
+    if (popoverInstance) {
+      popoverInstance.hide();
+    }
+  }
 
   // tags
   addTag(): void {
@@ -441,7 +425,6 @@ closePopoverr() {
   // font size
   onFontSizeChange(fontSize: string): void {
     this.selectedFontSize = fontSize;
-    // You can emit this change or apply it directly to your application
     console.log('Selected Font Size:', this.selectedFontSize);
   }
   // language
@@ -456,11 +439,9 @@ closePopoverr() {
 
   // multiple select
 
-
-
   selectCountry(country: Country): void {
     this.selectedCountry = country.name.common;
-    this.dropdownOpen = false; // Close the dropdown after selection
+    this.dropdownOpen = false;
     this.selectedCountryFlag = country.flags.png;
   }
 
@@ -511,9 +492,6 @@ closePopoverr() {
   }
 
 
-
-
-
   // scroller
   updatePercentage(event: Event) {
     const target = event.target as HTMLInputElement;
@@ -522,7 +500,6 @@ closePopoverr() {
   }
 
   updateThumbPosition(value: number) {
-    // Calculate the percentage of the slider's width
     this.thumbPosition = ((value - 0) / (100 - 0)) * 100;
   }
 
@@ -533,7 +510,7 @@ closePopoverr() {
     'Hong Kong', 'Honolulu', 'Houston', 'Kuala Lumpur', 'London',
     'Los Angeles', 'Melbourne', 'Mexico City', 'Miami', 'Minneapolis'
   ];
-  selectedCity = this.cities[0]; // Default value
+  selectedCity = this.cities[0];
 
   // wizards
   currentStep: number = 1;

@@ -22,7 +22,7 @@ export interface Country {
 export class CountryService {
   private apiUrl = 'https://restcountries.com/v3.1/all';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getCountries(): Observable<Country[]> {
     return this.http.get<Country[]>(this.apiUrl).pipe(

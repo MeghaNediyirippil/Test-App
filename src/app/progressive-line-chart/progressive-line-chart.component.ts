@@ -33,7 +33,7 @@ export class ProgressiveLineChartComponent implements OnInit {
         datasets: [
           {
             label: 'Dataset 1',
-            borderColor: 'rgb(255, 99, 132)', 
+            borderColor: 'rgb(255, 99, 132)',
             borderWidth: 2,
             pointRadius: 0,
             data: data,

@@ -17,7 +17,7 @@ export class CurrencyService {
 
   private apiUrlcurrency = 'assets/currency.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getCurrencies(): Observable<CurrencyData> {
     return this.http.get<CurrencyData>(this.apiUrlcurrency);

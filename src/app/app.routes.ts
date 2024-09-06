@@ -3,12 +3,15 @@ import { TablesComponent } from './tables/tables.component';
 import { FormsComponent } from './forms/forms.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalenderComponent } from './calender/calender.component';
-import { FullCalendarComponent } from '@fullcalendar/angular';
-import { Calendar } from '@fullcalendar/core/index.js';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     { path: '', component: DashboardComponent },
     { path: 'calender', component: CalenderComponent },
     { path: 'table', component: TablesComponent },
     { path: 'forms', component: FormsComponent },
+    { path: 'signup', component: SignupComponent },
+    { path: 'login', component: LoginComponent }
+
 ];

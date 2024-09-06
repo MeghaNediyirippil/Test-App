@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-tables',
   standalone: true,
-  imports: [CommonModule, FormsModule], 
+  imports: [CommonModule, FormsModule],
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.css']
 })
@@ -45,7 +45,7 @@ export class TablesComponent {
     { engine: 'Presto', browser: 'Opera 15.0', platform: 'Win 8+', version: '15.0', grade: 'A' },
     { engine: 'Misc', browser: 'Kindle 2.0', platform: 'Embedded devices', version: '2.0', grade: 'B' }
   ];
-  
+
 
   searchQuery = ''; // For search input
   currentPage = 1;

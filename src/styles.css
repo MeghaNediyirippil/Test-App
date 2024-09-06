@@ -7,13 +7,14 @@
     background-color: #FFFFFF;
 }
 
-.btn-color{
+.btn-color {
     background-color: #4191d2;
 }
-.btn-color:hover{
+
+.btn-color:hover {
     background-color: #3170a3;
 }
 
-.icon-color{
+.icon-color {
     color: #82aed4;
 }

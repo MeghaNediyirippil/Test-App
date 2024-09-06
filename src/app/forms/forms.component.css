@@ -23,6 +23,7 @@ label{
 .right-align-color{
   background-color: #F5F5F5;
 }
+
 /* scroller */
 .slider-container {
   position: relative;
@@ -132,9 +133,6 @@ label{
   background-color: #f0f0f0;
 }
 
-
-
-
 .custom-dropdown-menu {
   max-height: 200px;
   overflow-y: auto;
@@ -211,7 +209,6 @@ label{
   padding: 0.375rem 0;
   margin: 0;
   outline: none;
-
 }
 
 .tags {
@@ -239,13 +236,10 @@ label{
   cursor: pointer;
 }
 
-
-
 .form-control:focus {
   border-color: #80bdff;
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
 }
-
 
 /* popover */
 .popover-body {
@@ -263,7 +257,17 @@ label{
   margin-top: 10px;
 }
 
-
 .table-font-size {
   font-size: 13px !important;
+}
+
+/* Prepend & Append */
+.input-group-text{
+  background-color: #EEEEEE;
+}
+
+.btn-style{
+  border: 1px solid rgb(195, 195, 205);
+  border-radius: 0;
+  
 }

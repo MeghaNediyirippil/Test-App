@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class TimezoneService {
   private apiUrlTime = 'assets/timezone.json';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getTimezones(): Observable<any> {
     return this.http.get<any>(this.apiUrlTime);

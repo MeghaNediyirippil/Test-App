@@ -10,7 +10,7 @@ describe('ProgressiveDoughnutChartComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ProgressiveDoughnutChartComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ProgressiveDoughnutChartComponent);
     component = fixture.componentInstance;

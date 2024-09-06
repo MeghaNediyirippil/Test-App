@@ -79,12 +79,11 @@ export class CalenderComponent implements AfterViewInit {
     this.draggableInstances.forEach(instance => instance.destroy());
     this.draggableInstances = [];
 
-    // Use setTimeout to ensure elements are available in the DOM
     setTimeout(() => {
       const externalEvents = document.querySelectorAll('.external-event');
 
       externalEvents.forEach((el) => {
-        const element = el as HTMLElement; // Cast Element to HTMLElement
+        const element = el as HTMLElement; 
 
         const draggable = new Draggable(element, {
           itemSelector: '.external-event',

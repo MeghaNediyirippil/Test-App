@@ -1,4 +1,14 @@
 .custom-height {
-    height: 250px;
+  height: 250px;
+}
+
+.bar-chart {
+  height: 200px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .bar-chart {
+    flex-direction: column;
+    height: 400px;
   }
-  
+}

@@ -711,48 +711,121 @@
                         </fieldset>
 
                         <div>
-                            <legend>Prepend & Append</legend>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">a</span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                                    aria-describedby="basic-addon1">
+                            <p class="fs-4">Prepend & Append</p>
+                            <div class="d-flex">
+                                <div>
+                                    <label for="" class="text-end">Prepended Input</label>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="fa-solid fa-at fa-sm"></i></span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
                             </div>
 
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Recipient's username"
-                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <span class="input-group-text" id="basic-addon2">example.com</span>
+                            <div class="d-flex">
+                                <div>
+                                    <label for="" class="text-end">W/ input & radios</label>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><input type="checkbox"></span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                </div>
                             </div>
 
-                            <div class="mb-3">
-                                <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="d-flex">
+                                <div>
+                                    <label for="" class="text-end">Appended Input</label>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                    <span class="input-group-text" id="basic-addon1">.00</span>
+
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div>
+                                    <label for="" class="text-end">Combined</label>
+                                </div>
                                 <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                                    <input type="text" class="form-control" id="basic-url"
-                                        aria-describedby="basic-addon3 basic-addon4">
+                                    <span class="input-group-text" id="basic-addon1">$</span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                        aria-describedby="basic-addon1">
+                                    <span class="input-group-text" id="basic-addon1">.00</span>
                                 </div>
-                                <div class="form-text" id="basic-addon4">Example help text goes outside the input group.
+                            </div>
+
+                            <div class="d-flex  my-3">
+                                <div>
+                                    <label for="" class="text-end">With buttons</label>
+                                </div>
+                                <div class="input-group">
+                                    <input class="form-control" id="appendbutton" type="text">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-style p-2" type="button">
+                                            Search
+                                        </button>
+                                        <button class="btn btn-style p-2" type="button">
+                                            Options
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">$</span>
-                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                <span class="input-group-text">.00</span>
+                            <div class="d-flex my-3">
+                                <div>
+                                    <label for="" class="text-end">With dropdowns
+                                    </label>
+                                </div>
+                                <div class="input-group ">
+                                    <div class="input-group-btn d-flex">
+                                        <input class="form-control" id="appendbutton" type="text">
+                                        <button class="btn btn-style p-2" type="button">
+                                            Action
+                                        </button>
+                                        <!-- Select dropdown -->
+
+                                        <select class="input-group-text rounded-0 w-25 p-0" id="basic-addon1"
+                                            aria-label="Action select">
+                                            <option selected></option>
+                                            <option value="1">Action</option>
+                                            <option value="2">Another action</option>
+                                            <option value="3">Something else here</option>
+                                            <option value="4">Separated link</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-                                <span class="input-group-text">a</span>
-                                <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-                            </div>
 
-                            <div class="input-group">
-                                <span class="input-group-text">With textarea</span>
-                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                            <div class="d-flex my-3">
+                                <label for="" class="text-end">With dropdowns
+                                </label>
+
+                                <div class="input-group ">
+                                    <div class="input-group-btn d-flex">
+                                        <button class="btn btn-style p-2" type="button">
+                                            Action
+                                        </button>
+                                        <!-- Select dropdown -->
+
+                                        <select class=" rounded-0 w-25 p-0" id="basic-addon1"
+                                            aria-label="Action select">
+                                            <option selected></option>
+                                            <option value="1">Action</option>
+                                            <option value="2">Another action</option>
+                                            <option value="3">Something else here</option>
+                                            <option value="4">Separated link</option>
+                                        </select>
+                                        <input class="form-control" id="appendbutton" type="text">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                         <div class="form-actions my-4">
                             <div class="row">
                                 <div class="col-md-12">
@@ -997,26 +1070,27 @@
                         <div class="container form-group m-0 p-0 mt-3">
                             <label for="dateInput">Tags</label>
                             <div class="tag-input-wrapper d-flex align-items-center">
-                                <input type="text" [formControl]="tagControl" (keydown.enter)="addTag()" 
+                                <input type="text" [formControl]="tagControl" (keydown.enter)="addTag()"
                                     class="form-control form-control-style" placeholder="Type a tag and press Enter" />
                                 <div class="tags d-flex">
                                     <span *ngFor="let tag of tags" class="tag mx-1 p-1">
                                         {{ tag }}
-                                        <button type="button" class="btn btn-sm btn-danger ms-1" (click)="removeTag(tag)">x</button>
+                                        <button type="button" class="btn btn-sm btn-danger ms-1"
+                                            (click)="removeTag(tag)">x</button>
                                     </span>
                                 </div>
                             </div>
                         </div>
-                        
-                        
-                        
+
+
+
 
 
                         <!-- masking -->
-                         <div class="my-3">
+                        <div class="my-3">
                             <h5>Masking</h5>
                             <hr>
-                         </div>
+                        </div>
 
                         <!-- date-mask -->
                         <div class="container mt-3 m-0 p-0">

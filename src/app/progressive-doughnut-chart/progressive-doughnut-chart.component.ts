@@ -113,7 +113,7 @@ export class ProgressiveDoughnutChartComponent implements OnInit {
 
   handleMouseDown(canvas: HTMLCanvasElement, event: MouseEvent): void {
     // Left mouse button
-    if (event.button === 0) { 
+    if (event.button === 0) {
       this.isDragging = true;
       this.startX = event.clientX;
       this.startY = event.clientY;
@@ -152,7 +152,7 @@ export class ProgressiveDoughnutChartComponent implements OnInit {
 
   handleMouseUp(event: MouseEvent): void {
     // Left mouse button
-    if (event.button === 0) { 
+    if (event.button === 0) {
       this.isDragging = false;
     }
   }
